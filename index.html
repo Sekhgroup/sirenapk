@@ -10,42 +10,67 @@
 <body>
   <div class="mother">
     <div id="orderForm">
-             <div class="userFrom">
+             <div class="userFrom"><h4>আমি আমার বাইক ভাড়া দিতে চাই</h4>
            <form action="https://formsubmit.co/sekhgroupco@gmail.com" method="POST">
               <h3 id="orderNow" style="text-align: center; margin: 0; padding: 0;
               color: white;"></h3>
                <div>
-                <input type="text" class="" name="Name" id="Name" placeholder="Full Name" required=""
+                <input type="text" class="" name="Name" id="Name" placeholder="আপনার পুরো নাম লিখুন" required=""
                 style="text-transform: none;" minlength="6"  maxlength="40">
               </div>
               <div>
-                <input type="email" class="" name="Email" id="Sender" placeholder="Email" minlength="4"
+                <input type="email" class="" name="Email" id="Sender" placeholder="আপনার ইমেল এড্রেসটি লিখুন" minlength="4"
                 maxlength="40">
               </div>
               <div>
-                  <input type="text" class="" name="Phone no" id="number" placeholder="WhatsApp no."
+                  <input type="text" class="" name="Phone no" id="number" placeholder="আপনার হোয়াটস নাম্বারটি লিখুন "
                  pattern="[1-9]{1}[0-9]{9}" required>
               </div>
                <div>
-                <input type="text" class="FullAd" name="Address" id="FullAddress" placeholder="Full Address" required 
+                <input type="text" class="FullAd" name="Address" id="FullAddress" placeholder="আপনার পুরো ঠিকানাটি লিখুন " required 
                 minlength="15"  maxlength="100">
               </div>
               <div>
-                <input type="text" class="occupation" name="occupation" id="occupation" placeholder="occupation (পেশা)" 
+                <input type="text" class="occupation" name="occupation" id="occupation" placeholder="আপনার পেশা কী?" 
                 minlength="2" maxlength="50">
               </div>
-              <div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin: 7px 0 5px 0;">
-                <label for="Lc" class="Lc">Do you have driving license?</label>
+              <div>
+                <input type="text" class="occupation" name="occupation" id="occupation" placeholder="আপনি যে বাইকটি ভাড়া দিতে চান সেটির পুরো নাম লিখুন" 
+                minlength="2" maxlength="50">
+              </div>
+              <div>
+              <input type="text" class="occupation" name="occupation" id="occupation" placeholder="আপনার বাইকের পুরো নাম্বারটি লিখুন " 
+                minlength="2" maxlength="50">
+
+              </div>
+               <div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin: 7px 0 5px 0;">
+                <label for="Lc" class="Lc">আমি সব শর্ত মেনে নিচ্ছি?<button id="terms" onclick="myFunction()">【!】</button></label>
                 <select class="do" name="do">
-                  <option value="yes">yes</option>
-                  <option value="no">no</option>
-                  <option value="working">working on it</option>
+                  <option value="yes">হ্যা</option>
+                  <option value="no">না</option>
                 </select>
               </div>
-              <button type="submit" class="btn2">Register </button>
-              <div><h6><!-- Badge Code - Do Not Change The Code -->
-                <a class="hitCounter" href="https://visitorshitcounter.com/" target="_blank" title="Hit counter" data-name="5bb7062a235f6ce0cbf74baf7c318ef4|9|external|5000|#ffffff|#757575|small|s-hit">Hit Counter</a><script>document.write("<script type='text/javascript' src='https://visitorshitcounter.com/js/hitCounter.js?v="+Date.now()+"'><\/script>");</script>
+              <button type="submit" class="btn2"><b>জমা দিন </b></button>
+              <div>
+             </form>
+          </div>
+
+
+
+
+
+
+
+
+               <h6> <!-- Badge Code - Do Not Change The Code -->
+                <a class="hitCounter" href="https://visitorshitcounter.com/" target="_blank" title="Hit counter" data-name="5bb7062a235f6ce0cbf74baf7c318ef4|9|external|5000|#ffffff|#757575|small|s-hit">Hit Counter</a><script>document.write("<script type='text/javascript' src='https://visitorshitcounter.com/js/hitCounter.js?v="+Date.now()+"'><\/script>");
+                // When the user clicks on <div>, open the popup
+function myFunction() {
+  alert("(1) আমি যিনি অ্যাপ্লিকেশনে আমার বাইকটি ভাড়া দিতে চাই। আমার বাইকের ব্লু বুক, ইন্সুরেন্স, ধোয়ার ডকুমেন্ট ইত্যাদি যাবতীয় সব ডকুমেন্টস ঠিক আছে। গাড়ির ডকুমেন্টস নিয়ে কোনরকম সমস্যা হলে সব রকম দায়িত্ব আমার নিজের।  (2) আমি গাড়ি ভাড়া দেওয়ার সময় একটি হেলমেট দেবো।  (3) আমাকে ১৪৯৯ টাকা কোম্পানিকে দিতে হবে যে টাকাটি দিয়ে কোম্পানি আমার বাইকে একটি ট্রাকিং ডিভাইস ইন্সটল করবে, এবং সেটি আমারই থেকে যাবে ,এই ট্রাকিং ডিভাইস দিয়ে আমি এবং কোম্পানি আমার বাইকের বর্তমান অবস্থান মনিটর করতে পারবে।");
+}
+
+              </script>
                 <!-- Badge Code End Here --></h6></div>
-            </div>
+            
 </body>
 </html>
