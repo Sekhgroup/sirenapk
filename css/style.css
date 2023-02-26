@@ -19,7 +19,7 @@ body{
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 700px;
 }
 input{
     border-radius: 10px;
@@ -32,7 +32,8 @@ input{
     height: 65px;
 }
 .Lc{
-    color: rgb(175, 92, 3);
+    color: black;
+    font-weight: bold;
 }
 .do{
     border-radius: 10px;
@@ -50,7 +51,17 @@ input{
     margin: 5px;
     cursor: pointer;
 }
-
+#terms{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #ff2659;
+    font-weight: bold;
+    cursor: pointer;
+}
+#terms:hover{
+    color: #9e0025;
+}
 @media (max-width: 580px) {
     input{
         width: 260px;
