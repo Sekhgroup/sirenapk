@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Siren</title>
+  <style>
+    body{
+      margin: 0;
+    }
+    .mother{
+      width: 100%;
+      height: 100vh;
+      max-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-color: rgb(0, 0, 0);
+      margin: 0;
+      padding: 0;
+    }
+    .ch1{
+      width: 100%;
+      height: 33vh;
+      background-color: green; /* Replace with the desired color */
+      animation: ch1 .40s linear infinite;
+    }
+    @keyframes ch1 {
+  0% {
+    background-color: transparent; /* Initial color */
+  }
+  50% {
+    background-color: transparent; /* Color change or transparency */
+  }
+  100% {
+    background-color: rgb(22, 69, 255); /* Back to the initial color */
+    box-shadow: 0 0 20px 5px rgb(22, 69, 255);
+  }
+}
+    .ch2{
+      width: 100%;
+      height: 33vh;
+      background-color: green; /* Replace with the desired color */
+      
+      animation: ch2 .50s linear infinite;
+    }
+    @keyframes ch2 {
+  0% {
+    background-color: transparent; /* Initial color */
+  }
+  50% {
+    background-color: transparent; /* Color change or transparency */
+  }
+  100% {
+    background-color: rgb(255, 35, 35); /* Back to the initial color */
+    box-shadow: 0 0 20px 5px rgb(255, 35, 35);
+  }
+}
+    .ch3{
+      width: 100%;
+      height: 33vh;
+      background-color: green; /* Replace with the desired color */
+      animation: ch3 .45s linear infinite;
+    }
+    @keyframes ch3 {
+  0% {
+    background-color: transparent; /* Initial color */
+  }
+  50% {
+    background-color: transparent; /* Color change or transparency */
+  }
+  100% {
+    background-color: rgb(22, 69, 255); /* Back to the initial color */
+    box-shadow: 0 0 20px 5px rgb(22, 69, 255);
+  }
+}
+
+
+
+/*-----------------------------------*\
+ * #NO INTERNET
+\*-----------------------------------*/
+
+
+
+ #connection-checker-full-screen {
+  visibility: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  font-size: 50px;
+  color: #fff;
+  background-color: #fff;
+  transition: 500ms;
+  z-index: 50;
+}
+
+#connection-checker-full-screen span {
+  /* background-color: #000c; */
+  border-radius: 30px;
+  padding: 40px;
+  color: #fff;
+}
+
+#connection-checker-full-screen img {
+  width: 100%;
+  height: auto;
+}
+
+.middle-center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+
+.flip-in-diag-2-br {
+  -webkit-animation: flip-in-diag-2-br 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: flip-in-diag-2-br 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.flip-out-diag-2-tl {
+  -webkit-animation: flip-out-diag-2-tl 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: flip-out-diag-2-tl 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@-webkit-keyframes flip-in-diag-2-br {
+  0% {
+      -webkit-transform: rotate3d(-1, 1, 0, -80deg);
+      transform: rotate3d(-1, 1, 0, -80deg);
+      opacity: 0;
+  }
+
+  100% {
+      -webkit-transform: rotate3d(1, 1, 0, 0deg);
+      transform: rotate3d(1, 1, 0, 0deg);
+      opacity: 1;
+  }
+}
+
+@keyframes flip-in-diag-2-br {
+  0% {
+      -webkit-transform: rotate3d(-1, 1, 0, -80deg);
+      transform: rotate3d(-1, 1, 0, -80deg);
+      opacity: 0;
+  }
+
+  100% {
+      -webkit-transform: rotate3d(1, 1, 0, 0deg);
+      transform: rotate3d(1, 1, 0, 0deg);
+      opacity: 1;
+  }
+}
+
+@-webkit-keyframes flip-out-diag-2-tl {
+  0% {
+      -webkit-transform: rotate3d(1, 1, 0, 0deg);
+      transform: rotate3d(1, 1, 0, 0deg);
+      opacity: 1;
+  }
+
+  100% {
+      -webkit-transform: rotate3d(-1, 1, 0, -70deg);
+      transform: rotate3d(-1, 1, 0, -70deg);
+      opacity: 0;
+  }
+}
+
+@keyframes flip-out-diag-2-tl {
+  0% {
+      -webkit-transform: rotate3d(1, 1, 0, 0deg);
+      transform: rotate3d(1, 1, 0, 0deg);
+      opacity: 1;
+  }
+
+  100% {
+      -webkit-transform: rotate3d(-1, 1, 0, -70deg);
+      transform: rotate3d(-1, 1, 0, -70deg);
+      opacity: 0;
+  }
+}
+
+  </style>
+</head>
+<body>
+   <!-- 
+    - #NO INTERNET
+  --> 
+
+  <div id="connection-checker-full-screen">
+    <div class="middle-center">
+        <span><img src="https://cdn.dribbble.com/users/1375592/screenshots/5928783/no_internet.gif" alt=""></span>
+    </div>
+</div>
+
+
+
+  <audio id="myAudio" autoplay loop>
+    <source src="res/siren2.wav" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  
+  <div class="mother">
+    <div class="ch1"></div>
+    <div class="ch2"></div>
+    <div class="ch3"></div>
+  </div>
+  <script>
+    const audio = document.getElementById('myAudio');
+
+audio.addEventListener('ended', function() {
+  this.currentTime = 0;
+  this.play();
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+  audio.play();
+});
+
+
+
+
+
+
+//******************************************** NO INTERNET ********************************* */
+
+// Internet connection checker
+function connection_checker() {
+  // Getting full screen connection status
+  const full_screen_widget = document.getElementById("connection-checker-full-screen")
+  // Getting "offline-error-activated" status
+  const offline_error_activated = document.getElementsByClassName("offline-error-activated")[0]
+  // If the user is online and disconnection error is activated
+  if (navigator.onLine == true && offline_error_activated != undefined) {
+      // Add a green background color for disconnection error
+      full_screen_widget.style.backgroundColor = "#5bff29"
+      location.reload();
+      // Adding 1 second delay to avoid interference with changing background color smoothly
+      setTimeout(function () {
+          // Hiding disconnection error with animation
+          full_screen_widget.setAttribute("class", "flip-out-diag-2-tl")
+      }, 1000)
+      // Adding 2 seconds delay to avoid interference with hiding animation
+      setTimeout(function () {
+          // Hiding disconnection error element
+          full_screen_widget.style.visibility = "hidden"
+      }, 2000)
+      // Enable all elements click and selection
+      document.body.style.userSelect = "auto"
+      document.body.style.pointerEvents = "auto"
+  } else if (navigator.onLine == false) { // If user is offline
+      // Display disconnection error with animation
+      full_screen_widget.setAttribute("class", "flip-in-diag-2-br offline-error-activated")
+      // Display disconnection error element
+      full_screen_widget.style.visibility = "visible"
+      // Add a red background color for disconnection error
+      full_screen_widget.style.backgroundColor = "#fff"
+      // Disable all elements click and selection
+      document.body.style.userSelect = "none"
+      document.body.style.pointerEvents = "none"
+  }
+}
+
+// Checking the user internet connection every 1 second
+setInterval(connection_checker, 1000)
+  </script>
+</body>
+</html>
