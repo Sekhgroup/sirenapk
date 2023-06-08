@@ -184,7 +184,7 @@
 
   </style>
 </head>
-<body>
+<body onclick="playSound()">
    <!-- 
     - #NO INTERNET
   --> 
@@ -197,10 +197,6 @@
 
 
 
-  <audio id="myAudio" autoplay loop>
-    <source src="res/siren2.wav" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
   
   <div class="mother">
     <div class="ch1"></div>
@@ -208,16 +204,19 @@
     <div class="ch3"></div>
   </div>
   <script>
-    const audio = document.getElementById('myAudio');
+    var audio = new Audio(); // Create a new Audio object
+    var currentSoundIndex = 0; // Index of the current sound
 
-audio.addEventListener('ended', function() {
-  this.currentTime = 0;
-  this.play();
-});
+    var soundFiles = ['res/siren2.wav', 'res/siren.wav', 'sound3.mp3']; // Array of sound file paths
 
-window.addEventListener('DOMContentLoaded', function() {
-  audio.play();
-});
+    function playSound() {
+      audio.src = soundFiles[currentSoundIndex]; // Set the source to the current sound file
+      audio.loop = true;
+      audio.play();
+
+      // Increment the current sound index
+      currentSoundIndex = (currentSoundIndex + 1) % soundFiles.length;
+    }
 
 
 
